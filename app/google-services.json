@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "386086527737",
+    "firebase_url": "https://cozcozdurapp.firebaseio.com",
+    "project_id": "cozcozdurapp",
+    "storage_bucket": "cozcozdurapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386086527737:android:c0ecc4b40ff8236b",
+        "android_client_info": {
+          "package_name": "com.example.zeynep.cozcozdurapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386086527737-8ateekrka1uevm9dsje86mpgn00bpku2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zeynep.cozcozdurapp",
+            "certificate_hash": "b89c2b02721e57b8892619bbe768778968268805"
+          }
+        },
+        {
+          "client_id": "386086527737-prkl7f43ng14eqbt5f9ejq48pu5kikv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLKzvop-GDejOwJFV5WhoP6OGvDafQG7s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386086527737-prkl7f43ng14eqbt5f9ejq48pu5kikv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
