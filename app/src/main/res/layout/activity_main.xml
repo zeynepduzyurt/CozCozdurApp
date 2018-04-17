@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="136dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/email"
         android:inputType="textEmailAddress" />
 
     <EditText
@@ -26,7 +26,7 @@
         android:layout_below="@+id/email"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Şifre"
+        android:hint="@string/sifre"
         android:inputType="textEmailAddress" />
 
     <com.google.android.gms.common.SignInButton
@@ -46,6 +46,6 @@
         android:layout_below="@+id/sifre"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:text="Giriş Yap" />
+        android:text="@string/girisyap" />
 
 </RelativeLayout>

@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">CozCozdurApp</string>
+    <string name="app_name">Çöz-Çözdür</string>
+    <string name="email">E-mail</string>
+    <string name="sifre">Password</string>
+    <string name="hosgeldiniz">Welcome!</string>
+    <string name="girisyap">Sign In</string>
+    <string name="sifreunutma">Did you forget your password?</string>
+    <string name="sifrefirla">Reset Password</string>
+    <string name="kaydol">Don't you have an account? Sign Up!</string>
+    <string name="profil">Profile</string>
+    <string name="cikisyap">Log Out</string>
+    <string name="testcoz">Solve Test</string>
+    <string name="bizeulasin">Contact Us</string>
+
 </resources>

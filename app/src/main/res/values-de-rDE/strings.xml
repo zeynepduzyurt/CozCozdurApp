@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Çöz-Çözdür</string>
+    <string name="email">E-mail</string>
+    <string name="sifre">Passwort</string>
+    <string name="hosgeldiniz">Herzlich willkommen!</string>
+    <string name="girisyap">Anmelden!</string>
+    <string name="sifreunutma">Haben Sie Ihr Passwort vergessen?</string>
+    <string name="kaydol">Hast du kein Konto? Anmelden!</string>
+    <string name="profil">Profil</string>
+    <string name="cikisyap">Ausloggen</string>
+    <string name="testcoz">Test Lösen</string>
+    <string name="bizeulasin">Kontaktiere Uns</string>
+    <string name="sifrefirla">Passwort Zurücksetzen</string>
+</resources>
