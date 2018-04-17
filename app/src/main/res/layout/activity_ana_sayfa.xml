@@ -37,7 +37,6 @@
             android:text="Fragment 3" />
     </LinearLayout>
 
-    <!--Her bir fragment bileşeni bu alan içerisinde gösterilir. Bunun için ID yani kimlik değeri vermeyi unutmayınız -->
     <LinearLayout
         android:id="@+id/fragmentArea"
         android:layout_width="match_parent"

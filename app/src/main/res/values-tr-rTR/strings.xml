@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Çöz-Çözdür</string>
+    <string name="email">E-mail</string>
+    <string name="sifre">Şifre</string>
+    <string name="hosgeldiniz">Hoşgeldiniz!</string>
+    <string name="girisyap">Giriş Yap</string>
+    <string name="sifreunutma">Şifre Unutma</string>
+    <string name="kaydol">Hesabın yok mu? Kaydol.</string>
+    <string name="profil">Profil</string>
+    <string name="cikisyap">Çıkış Yap</string>
+    <string name="testcoz">Test Çöz</string>
+    <string name="bizeulasin">Bize Ulaşın</string>
+    <string name="sifrefirla">Şifre Sıfırlama</string>
+</resources>
