@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -29,12 +30,14 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class MainActivity extends AppCompatActivity {
 
     private EditText email, password;
+    private TextView kaydol, sifreunutma;
     private Button girisyap;
     private FirebaseAuth mAuth;
-    private  FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseAuth.AuthStateListener mAuthListener;
     private SignInButton googleBtn;
     private GoogleApiClient mGoogleApiClient;
-    private  final static  int RC_SIGN_IN = 2;
+    private final static int RC_SIGN_IN = 2;
+
 
 
     @Override
@@ -49,9 +52,9 @@ public class MainActivity extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email);
         password = (EditText) findViewById(R.id.sifre);
         girisyap = (Button) findViewById(R.id.girisyap);
-        googleBtn=(SignInButton)findViewById(R.id.googleButton);
+        googleBtn = (SignInButton) findViewById(R.id.googleButton);
 
-        GoogleSignInOptions gso= new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
@@ -63,14 +66,14 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Bir şeyler yanlış gitti..", Toast.LENGTH_SHORT).show();
                     }
                 })
-                .addApi(Auth.GOOGLE_SIGN_IN_API,gso)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                if (firebaseAuth.getCurrentUser() != null){
-                 startActivity(new Intent(MainActivity.this,anaSayfa.class));
+                if (firebaseAuth.getCurrentUser() != null) {
+                    startActivity(new Intent(MainActivity.this, anaSayfa.class));
                 }
             }
         };
@@ -90,49 +93,45 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     @Override
     protected void onStart() {
         super.onStart();
         mAuth.addAuthStateListener(mAuthListener);
     }
 
-    private void startSignIn(){
+    private void startSignIn() {
         String mail = email.getText().toString();
         String sifre = password.getText().toString();
-        if(TextUtils.isEmpty(mail)|| TextUtils.isEmpty(sifre)) {
+        if (TextUtils.isEmpty(mail) || TextUtils.isEmpty(sifre)) {
             Toast.makeText(MainActivity.this, "Eksik alanları doldurunuz!", Toast.LENGTH_SHORT).show();
-        }
-        else {
-            mAuth.signInWithEmailAndPassword(mail,sifre).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        } else {
+            mAuth.signInWithEmailAndPassword(mail, sifre).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
 
-                    if(!task.isSuccessful()){
+                    if (!task.isSuccessful()) {
                         Toast.makeText(MainActivity.this, "Giriş Hatalı!", Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
-  }
+    }
 
-  private void googleSignIn(){
+    private void googleSignIn() {
         Intent signInIntent = Auth.GoogleSignInApi.getSignInIntent(mGoogleApiClient);
         startActivityForResult(signInIntent, RC_SIGN_IN);
-  }
+    }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == RC_SIGN_IN){
+        if (requestCode == RC_SIGN_IN) {
             GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
-            if(result.isSuccess()){
+            if (result.isSuccess()) {
                 GoogleSignInAccount account = result.getSignInAccount();
                 firebaseAuthWithGoogle(account);
-            }
-            else{
+            } else {
                 Toast.makeText(this, "Başarısız oldu", Toast.LENGTH_SHORT).show();
             }
         }
@@ -148,13 +147,13 @@ public class MainActivity extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                           // updateUI(user);
+                            // updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithCredential:failure", task.getException());
                             Toast.makeText(MainActivity.this, "Giriş Başarısız", Toast.LENGTH_SHORT).show();
 
-                           // updateUI(null);
+                            // updateUI(null);
                         }
 
 
