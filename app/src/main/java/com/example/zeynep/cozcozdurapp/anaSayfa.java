@@ -44,7 +44,7 @@ public class anaSayfa extends AppCompatActivity {
         }
 
         if(id==R.id.bizeulasin){
-            Intent intent = new Intent(anaSayfa.this,TestCoz.class);
+            Intent intent = new Intent(anaSayfa.this,BizeUlasin.class);
             startActivity(intent);
         }
         return true;

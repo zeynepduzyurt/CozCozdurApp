@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="com.example.zeynep.cozcozdurapp.BizeUlasin">
 
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/etMailAdres"
+        android:layout_centerHorizontal="true"
+        android:text="cozcozdur1@gmail.com"
+        android:visibility="invisible"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/etMail_icerik"
+        android:layout_below="@+id/etMailAdres"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="132dp"
+        android:hint="mailinizi buraya yazın..." />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etKonu"
+        android:layout_marginTop="54dp"
+        android:hint="konu"
+        android:layout_below="@+id/etMailAdres"
+        android:layout_alignLeft="@+id/etMail_icerik"
+        android:layout_alignStart="@+id/etMail_icerik"
+        android:layout_alignRight="@+id/etMail_icerik"
+        android:layout_alignEnd="@+id/etMail_icerik" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etMail_icerik"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/buton"
+        android:text="Mail Gönder"
+
+         />
+
+    <Button
+        android:id="@+id/konum"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="65dp"
+        android:background="@drawable/buton"
+        android:onClick="btn"
+
+        android:text="KONUM" />
+</RelativeLayout>
