@@ -13,6 +13,9 @@
     <string name="cozcozdur">Çöz-Çözdür</string>
     <string name="bizeulasin">Contact Us</string>
     <string name="addpost">Add Post</string>
+    <string name="kullanicisil">Remove User</string>
+    <string name="emailgonder">Send E-mail</string>
+    <string name="konum">Location</string>
 
 
     <string-array name="file_name">

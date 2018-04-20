@@ -5,5 +5,7 @@
     <color name="colorAccent">#FF4081</color>
     <color name="white">#fff</color>
     <color name="black">#000</color>
+    <color name="backgroundColor">#f4f4ee</color>
+    <color name="uyeButtonColor">#Ffcc00</color>
     <color name="purple">#FF761E72</color>
 </resources>

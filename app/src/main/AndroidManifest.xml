@@ -24,10 +24,10 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".TestCoz" />
-        <activity android:name=".Profil" />
         <activity android:name=".CozCozdur" />
         <activity android:name=".BizeUlasin" />
-        <activity android:name=".PostActivity"></activity>
+        <activity android:name=".PostActivity" />
+        <activity android:name=".UyeOl"></activity>
     </application>
 
 </manifest>
