@@ -1,11 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
     tools:context="com.example.zeynep.cozcozdurapp.UyeOl">
 
 
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="100dp"
+        android:hint="Email"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/uyeEmail" />
 
-</android.support.constraint.ConstraintLayout>
+    <EditText
+        android:id="@+id/uyeParola"
+        android:layout_width="350dp"
+        android:layout_marginLeft="5dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/sifre"
+        android:inputType="textPassword"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp" />
+
+
+    <Button
+        android:text="Üye Ol!"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginLeft="125dp"
+        android:textColor="#FFFF"
+        android:id="@+id/yeniUyeButton"
+        android:background="@color/uyeButtonColor"
+        />
+
+
+    <Button
+        android:text="Zaten üye misin?"
+        android:layout_width="200dp"
+        android:layout_marginLeft="80dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:id="@+id/uyeGirisButton"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFF"
+        android:layout_marginTop="35dp" />
+
+</LinearLayout>

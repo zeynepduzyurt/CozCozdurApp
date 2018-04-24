@@ -53,6 +53,22 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.sifre);
         girisyap = (Button) findViewById(R.id.girisyap);
         googleBtn = (SignInButton) findViewById(R.id.googleButton);
+        sifreunutma =(TextView)findViewById(R.id.sifreunutma);
+        kaydol = (TextView)findViewById(R.id.hesapkaydol);
+
+        sifreunutma.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, YeniParolaActivity.class));
+            }
+        });
+
+        kaydol.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, UyeOl.class));
+            }
+        });
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))

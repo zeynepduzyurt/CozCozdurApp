@@ -27,7 +27,8 @@
         <activity android:name=".CozCozdur" />
         <activity android:name=".BizeUlasin" />
         <activity android:name=".PostActivity" />
-        <activity android:name=".UyeOl"></activity>
+        <activity android:name=".UyeOl" />
+        <activity android:name=".YeniParolaActivity"></activity>
     </application>
 
 </manifest>

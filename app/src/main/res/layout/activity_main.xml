@@ -61,12 +61,12 @@
         android:id="@+id/hesapkaydol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/girisyap"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="23dp"
-        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="25dp"
         android:text="@string/kaydol"
         android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/sifreunutma"
