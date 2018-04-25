@@ -21,7 +21,7 @@ public class YeniParolaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yeni_parola);
-        email=(EditText)findViewById(R.id.uyeEmail);
+       // email=(EditText)findViewById(R.id.uyeEmail);
         yeniParolagonder=(Button)findViewById(R.id.yeniParolaGonder);
         auth= FirebaseAuth.getInstance();
 
