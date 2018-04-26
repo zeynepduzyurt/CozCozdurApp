@@ -8,4 +8,5 @@
     <color name="backgroundColor">#f4f4ee</color>
     <color name="uyeButtonColor">#Ffcc00</color>
     <color name="purple">#FF761E72</color>
+    <color name="gray">#c2c2c2</color>
 </resources>

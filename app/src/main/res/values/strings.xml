@@ -16,7 +16,11 @@
     <string name="kullanicisil">Remove User</string>
     <string name="emailgonder">Send E-mail</string>
     <string name="konum">Location</string>
-
+    <string name="sendpost">Submıt Post</string>
+    <string name="posttitle">Post Title</string>
+    <string name="postdesc">Post Description</string>
+    <string name="postgo">Post Title Goes Here</string>
+    <string name="descgo">The Post Description Goes Here</string>
 
     <string-array name="file_name">
         <item>anakartlar</item>

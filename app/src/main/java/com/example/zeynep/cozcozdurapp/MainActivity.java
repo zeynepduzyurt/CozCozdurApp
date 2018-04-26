@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         sifreunutma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, YeniParolaActivity.class));
+       //         startActivity(new Intent(MainActivity.this, YeniParolaActivity.class));
             }
         });
 
