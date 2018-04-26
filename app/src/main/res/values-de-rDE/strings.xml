@@ -12,4 +12,13 @@
     <string name="testcoz">Test Lösen</string>
     <string name="bizeulasin">Kontaktiere Uns</string>
     <string name="sifrefirla">Passwort Zurücksetzen</string>
+    <string name="addpost">Beitrag hinzufügen</string>
+    <string name="kullanicisil">Benutzer entfernen</string>
+    <string name="emailgonder">E-Mail Senden</string>
+    <string name="konum">Lage</string>
+    <string name="sendpost">Beitrag absenden</string>
+    <string name="posttitle">Titel</string>
+    <string name="postdesc">"Beschreibung "</string>
+    <string name="postgo">Geben Sie den Posttitel ein</string>
+    <string name="descgo">Geben Sie die Beschreibung ein</string>
 </resources>

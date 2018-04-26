@@ -12,4 +12,13 @@
     <string name="testcoz">Test Çöz</string>
     <string name="bizeulasin">Bize Ulaşın</string>
     <string name="sifrefirla">Şifre Sıfırlama</string>
+    <string name="addpost">Gönderi Ekle</string>
+    <string name="kullanicisil">Kullanıcıyı Sil</string>
+    <string name="emailgonder">E-mail Gönder</string>
+    <string name="konum">Konum</string>
+    <string name="sendpost">Gönder</string>
+    <string name="posttitle">Konu</string>
+    <string name="postdesc">Açıklama</string>
+    <string name="postgo">Başlığı giriniz...</string>
+    <string name="descgo">Açıklamayı giriniz...</string>
 </resources>
