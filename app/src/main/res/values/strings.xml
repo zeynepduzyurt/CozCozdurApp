@@ -10,7 +10,7 @@
     <string name="profil">Profile</string>
     <string name="cikisyap">Log Out</string>
     <string name="testcoz">Solve Test</string>
-    <string name="cozcozdur">Çöz-Çözdür</string>
+    <string name="cozcozdur" translatable="false">Çöz-Çözdür</string>
     <string name="bizeulasin">Contact Us</string>
     <string name="addpost">Add Post</string>
     <string name="kullanicisil">Remove User</string>
@@ -19,8 +19,8 @@
     <string name="sendpost">Submıt Post</string>
     <string name="posttitle">Post Title</string>
     <string name="postdesc">Post Description</string>
-    <string name="postgo">Post Title Goes Here</string>
-    <string name="descgo">The Post Description Goes Here</string>
+    <string name="postgo">Enter the post title...</string>
+    <string name="descgo">Enter the post description...</string>
 
     <string-array name="file_name">
         <item>anakartlar</item>

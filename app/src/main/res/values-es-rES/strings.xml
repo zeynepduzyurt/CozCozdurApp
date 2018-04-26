@@ -12,4 +12,13 @@
     <string name="testcoz">Resolver La Prueba</string>
     <string name="bizeulasin">Contáctenos</string>
     <string name="sifrefirla">Restablecer La Contraseña</string>
+    <string name="addpost">Añadir Publicación</string>
+    <string name="kullanicisil">Eliminar Usuario</string>
+    <string name="emailgonder">"Enviar Correo Electrónico "</string>
+    <string name="konum">Ubicación</string>
+    <string name="sendpost">Enviar Publicación</string>
+    <string name="posttitle">Título</string>
+    <string name="postdesc">Descripción</string>
+    <string name="postgo">Ingrese el título de la publicación</string>
+    <string name="descgo">Ingrese la descripción de la publicación</string>
 </resources>
