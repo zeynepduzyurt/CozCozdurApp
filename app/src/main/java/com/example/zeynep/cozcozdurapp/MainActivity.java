@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     private final static int RC_SIGN_IN = 2;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,13 +52,13 @@ public class MainActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.sifre);
         girisyap = (Button) findViewById(R.id.girisyap);
         googleBtn = (SignInButton) findViewById(R.id.googleButton);
-        sifreunutma =(TextView)findViewById(R.id.sifreunutma);
-        kaydol = (TextView)findViewById(R.id.hesapkaydol);
+        sifreunutma = (TextView) findViewById(R.id.sifreunutma);
+        kaydol = (TextView) findViewById(R.id.hesapkaydol);
 
         sifreunutma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-       //         startActivity(new Intent(MainActivity.this, YeniParolaActivity.class));
+                //         startActivity(new Intent(MainActivity.this, YeniParolaActivity.class));
             }
         });
 
@@ -118,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     private void startSignIn() {
         String mail = email.getText().toString();
         String sifre = password.getText().toString();
-        if (TextUtils.isEmpty(mail) || TextUtils.isEmpty(sifre)) {
+        if (TextUtils.isEmpty(mail) || TextUtils.isEmpty(sifre)) {   // E-mail ve şifre alanlarının boş veya dolu olmasının kontrolü
             Toast.makeText(MainActivity.this, "Eksik alanları doldurunuz!", Toast.LENGTH_SHORT).show();
         } else {
             mAuth.signInWithEmailAndPassword(mail, sifre).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -139,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {  // Google hesabı ile giriş işlemleri
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_SIGN_IN) {

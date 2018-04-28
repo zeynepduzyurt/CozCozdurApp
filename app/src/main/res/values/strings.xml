@@ -6,7 +6,7 @@
     <string name="girisyap">Sign In</string>
     <string name="sifreunutma">Did you forget your password?</string>
     <string name="sifrefirla">Reset Password</string>
-    <string name="kaydol">Don't you have an account? Sign Up!</string>
+    <string name="kaydol">Don\'t you have an account? Sign Up!</string>
     <string name="profil">Profile</string>
     <string name="cikisyap">Log Out</string>
     <string name="testcoz">Solve Test</string>
@@ -23,45 +23,21 @@
     <string name="descgo">Enter the post description...</string>
 
     <string-array name="file_name">
-        <item>anakartlar</item>
-        <item>islemciler</item>
-        <item>bellekler</item>
-        <item>kasalar</item>
-        <item>diskSuruculer</item>
-        <item>donanimKartlari</item>
-        <item>dis_donanim_birimleri</item>
-        <item>goruntuleme_birimleri</item>
-        <item>yazicilar</item>
-        <item>goruntu_isleme_cihazlari</item>
-        <item>bios</item>
-        <item>genisleme_yuvalari</item>
-        <item>giris_cikis_birimleri</item>
-        <item>monitorler</item>
-        <item>bilgisayar_aglari</item>
-        <item>ag_protokolleri</item>
-        <item>internet</item>
-        <item>tasinabilir_pc</item>
+
+        <item>fiildecati</item>
+        <item>yazimkurallari</item>
+        <item>sozcukteanlam</item>
+        <item>fiilimsiler</item>
+        <item>yasambilimi</item>
+        <item>temelbilesenler</item>
     </string-array>
 
     <string-array name="titles">
-        <item>Anakartlar</item>
-        <item>İşlemciler</item>
-        <item>Bellekler</item>
-        <item>Kasalar</item>
-        <item>Disk Sürücüler</item>
-        <item>Donanım Kartları</item>
-        <item>Dış Donanım Birimleri</item>
-        <item>Görüntüleme Birimleri</item>
-        <item>Yazıcılar</item>
-        <item>Görüntü İşleme Cihazları</item>
-        <item>BIOS</item>
-        <item>Genişleme Yuvaları</item>
-        <item>Giriş Çıkış Birimleri</item>
-        <item>Monitörler</item>
-        <item>Bilgisayar Ağları</item>
-        <item>Ağ Protokolleri</item>
-        <item>Internet</item>
-        <item>Taşınabilir PC</item>
+        <item>Fiilde Çatı</item>
+        <item>Yazım Kuralları</item>
+        <item>Sözcükte Anlam</item>
+        <item>Fiilimsiler</item>
+        <item>Yaşam Bilimi</item>
+        <item>Temel Bileşenler</item>
     </string-array>
-
 </resources>

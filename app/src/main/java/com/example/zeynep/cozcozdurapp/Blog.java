@@ -1,5 +1,5 @@
 package com.example.zeynep.cozcozdurapp;
-
+// Blog sınıfı
 public class Blog {
     private String title;
     private String desc;

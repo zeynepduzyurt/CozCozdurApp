@@ -1,5 +1,5 @@
 package com.example.zeynep.cozcozdurapp;
-
+// Question sınıfı
 /**
  * Created by Zeynep on 18.04.2018.
  */
