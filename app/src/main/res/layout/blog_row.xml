@@ -12,14 +12,14 @@
         <ImageView
             android:id="@+id/post_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="350dp"
             android:adjustViewBounds="false"
             android:src="@mipmap/addphoto" />
 
         <TextView
             android:id="@+id/post_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="@string/postgo"
             android:padding="10dp"
             android:textStyle="bold" />
@@ -27,7 +27,7 @@
         <TextView
             android:id="@+id/post_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:hint="@string/descgo"
             android:padding="10dp"
             android:textStyle="normal" />

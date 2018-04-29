@@ -21,4 +21,7 @@
     <string name="postdesc">Descripción</string>
     <string name="postgo">Ingrese el título de la publicación</string>
     <string name="descgo">Ingrese la descripción de la publicación</string>
+    <string name="yeniparola">Enviar nuevo enlace de contraseña</string>
+    <string name="uyeol">Conviértase en miembro</string>
+    <string name="uyemisin">Ya eres miembro</string>
 </resources>

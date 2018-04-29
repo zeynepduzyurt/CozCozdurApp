@@ -27,6 +27,6 @@
         android:layout_height="50dp"
         android:layout_marginLeft="80dp"
         android:background="@color/uyeButtonColor"
-        android:text="Yeni Parola\n Bağlantısı Gönder!"
+        android:text="@string/yeniparola"
         android:textColor="#FFFF" />
 </LinearLayout>

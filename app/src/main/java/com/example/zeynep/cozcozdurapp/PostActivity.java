@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
@@ -79,7 +80,10 @@ public class PostActivity extends AppCompatActivity {
                     startActivity(new Intent(PostActivity.this, CozCozdur.class));
                 }
             });
+            
         }
+        else
+            Toast.makeText(this, "Başlık veya açıklama alanlarını doldurunuz!", Toast.LENGTH_SHORT).show();
     }
 
     @Override
