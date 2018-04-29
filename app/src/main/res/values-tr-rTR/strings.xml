@@ -21,4 +21,7 @@
     <string name="postdesc">Açıklama</string>
     <string name="postgo">Başlığı giriniz...</string>
     <string name="descgo">Açıklamayı giriniz...</string>
+    <string name="yeniparola">Yeni Parola Bağlantısı Gönder</string>
+    <string name="uyeol">Üye Ol!</string>
+    <string name="uyemisin">Zaten Üye misin?</string>
 </resources>

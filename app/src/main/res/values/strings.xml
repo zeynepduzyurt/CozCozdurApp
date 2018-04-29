@@ -21,6 +21,9 @@
     <string name="postdesc">Post Description</string>
     <string name="postgo">Enter the post title...</string>
     <string name="descgo">Enter the post description...</string>
+    <string name="yeniparola">Send new password link</string>
+    <string name="uyeol">Sign up!</string>
+    <string name="uyemisin">You are already a member</string>
 
     <string-array name="file_name">
 

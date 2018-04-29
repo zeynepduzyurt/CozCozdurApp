@@ -21,4 +21,7 @@
     <string name="postdesc">"Beschreibung "</string>
     <string name="postgo">Geben Sie den Posttitel ein</string>
     <string name="descgo">Geben Sie die Beschreibung ein</string>
+    <string name="yeniparola">Neuen Passwortlink senden</string>
+    <string name="uyeol">Werde Mitglied</string>
+    <string name="uyemisin">Sie sind bereits Mitglied</string>
 </resources>

@@ -52,7 +52,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="126dp"
-        android:text="@string/girisyap" />
+        android:background="@drawable/buton"
+        android:text="@string/girisyap"
+        android:textColor="@color/backgroundColor" />
 
     <TextView
         android:id="@+id/hesapkaydol"
