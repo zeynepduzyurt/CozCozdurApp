@@ -1,4 +1,5 @@
 package com.example.zeynep.cozcozdurapp;
+// Giriş ekranı gelmeden önce 3 saniye olan uygulama tanıtım ekranı
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,13 +16,12 @@ public class SplashScreen extends AppCompatActivity {
 
     }
 
-    class Splash extends Thread{
+    class Splash extends Thread {
         @Override
         public void run() {
             try {
                 sleep(3000);
-            }
-            catch (InterruptedException e){
+            } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             Intent intent = new Intent(SplashScreen.this, MainActivity.class);

@@ -19,10 +19,7 @@
         android:id="@+id/email"
         android:layout_width="266dp"
         android:layout_height="40dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="54dp"
-        android:layout_marginTop="247dp"
+        android:layout_centerInParent="true"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress" />
@@ -44,7 +41,7 @@
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp">
+        android:layout_marginBottom="73dp">
 
     </com.google.android.gms.common.SignInButton>
 
@@ -54,16 +51,17 @@
         android:layout_height="45dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="126dp"
         android:text="@string/girisyap" />
 
     <TextView
         android:id="@+id/hesapkaydol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/girisyap"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="45dp"
+        android:paddingLeft="20dp"
         android:text="@string/kaydol"
         android:textStyle="bold" />
 
@@ -72,10 +70,9 @@
         android:id="@+id/sifreunutma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="193dp"
-        android:layout_marginStart="28dp"
+        android:layout_below="@+id/sifre"
+        android:layout_marginStart="38dp"
         android:text="@string/sifreunutma"
         android:textStyle="bold" />
 

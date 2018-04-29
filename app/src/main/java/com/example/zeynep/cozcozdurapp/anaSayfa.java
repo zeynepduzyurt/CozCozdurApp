@@ -23,6 +23,7 @@ public class anaSayfa extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener authStateListener;
     private Button kullaniciSil, cikisYap;
     private TextView textView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +32,13 @@ public class anaSayfa extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.text);
         cikisYap = (Button) findViewById(R.id.cikis_yap);
 
-        auth = FirebaseAuth.getInstance();   authStateListener = new FirebaseAuth.AuthStateListener() {
+        auth = FirebaseAuth.getInstance();
+        authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
 
-                if (user == null) {
+                if (user == null) {    // Eğer kullanıcı kayıtlı değil ise MainActivity'e geri dön
                     startActivity(new Intent(anaSayfa.this, MainActivity.class));
                     finish();
                 }
@@ -47,7 +49,7 @@ public class anaSayfa extends AppCompatActivity {
 
         kullaniciSil.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {   // Kullanıcı Silme işlemi
                 if (user != null) {
                     user.delete().addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -76,6 +78,7 @@ public class anaSayfa extends AppCompatActivity {
 
 
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -93,7 +96,7 @@ public class anaSayfa extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-      getMenuInflater().inflate(R.menu.my_menu,menu);
+        getMenuInflater().inflate(R.menu.my_menu, menu);
         return true;
     }
 
@@ -101,19 +104,19 @@ public class anaSayfa extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id==R.id.testcoz){
-            Intent intent = new Intent(anaSayfa.this,TestCoz.class);
+        if (id == R.id.testcoz) {
+            Intent intent = new Intent(anaSayfa.this, TestCoz.class);
             startActivity(intent);
         }
 
-        if(id==R.id.cozcozdur){
-            Intent intent = new Intent(anaSayfa.this,CozCozdur.class);
+        if (id == R.id.cozcozdur) {
+            Intent intent = new Intent(anaSayfa.this, CozCozdur.class);
             startActivity(intent);
         }
 
 
-        if(id==R.id.bizeulasin){
-            Intent intent = new Intent(anaSayfa.this,BizeUlasin.class);
+        if (id == R.id.bizeulasin) {
+            Intent intent = new Intent(anaSayfa.this, BizeUlasin.class);
             startActivity(intent);
         }
         return true;

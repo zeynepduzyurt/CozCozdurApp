@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
-public class TestCoz extends AppCompatActivity implements AdapterView.OnItemSelectedListener, RadioGroup.OnCheckedChangeListener  {
+public class TestCoz extends AppCompatActivity implements AdapterView.OnItemSelectedListener, RadioGroup.OnCheckedChangeListener {
     TextView tv_question, tv_total_true, tv_total_false, tv_totalQuestion, testName;
     RadioGroup rg_options;
     RadioButton rbA;
@@ -45,6 +45,7 @@ public class TestCoz extends AppCompatActivity implements AdapterView.OnItemSele
     ArrayList<Question> qeuestions = new ArrayList<>();
     /*Toplam doğru sayısı, toplam yanlış sayısı, test sorularının bitip bitmediğini kontrol için sayaç, toplam soru sayısı ve spinner dan seçilen dosya index numarası*/
     int totalTrue = 0, totalFalse = 0, counter, questionsLength, file_index;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,7 +92,7 @@ public class TestCoz extends AppCompatActivity implements AdapterView.OnItemSele
 
 
     private void setTextForTextView() {
-        /*Doğrus sayıs, yanlış sayısı ve çözülen/toplam soru sayıları uygun kontrollere yazılır.*/
+        /*Doğru sayısı, yanlış sayısı ve çözülen/toplam soru sayıları uygun kontrollere yazılır.*/
         tv_total_true.setText("Doğru Sayısı : " + totalTrue);
         tv_total_false.setText("Yanlış Sayısı : " + totalFalse);
         tv_totalQuestion.setText(counter + "/" + questionsLength);
@@ -113,7 +114,7 @@ public class TestCoz extends AppCompatActivity implements AdapterView.OnItemSele
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, final int position, long id) {
-        /*Spinner dan bir veri seçildiğinde bu metot icra edilir.*/
+        /*Spinner dan bir veri seçildiğinde bu metot çalıştırılır.*/
         importantMethod(position);
     }
 
@@ -132,7 +133,7 @@ public class TestCoz extends AppCompatActivity implements AdapterView.OnItemSele
         /*AsyncTask ile ismi alınan dosya sunucudan alınır*/
         readXML = new ReadXML(this, fileName[position]);
         readXML.execute();
-        /*Doğrus sayıs, yanlış sayısı ve çözülen/toplam soru sayıları uygun kontrollere yazılır.*/
+        /*Doğru sayısı, yanlış sayısı ve çözülen/toplam soru sayıları uygun kontrollere yazılır.*/
         setTextForTextView();
     }
 

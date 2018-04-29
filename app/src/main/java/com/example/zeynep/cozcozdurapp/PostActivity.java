@@ -1,4 +1,5 @@
 package com.example.zeynep.cozcozdurapp;
+// Çöz-Çözdür kısmına fotoğraf ekleme bölümü
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -32,10 +33,10 @@ public class PostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
-        mSelectImage = (ImageButton)findViewById(R.id.imageSelect);
-        mPostTitle = (EditText)findViewById(R.id.titleField);
-        mPostDesc = (EditText)findViewById(R.id.descField);
-        mSubmitBtn = (Button)findViewById(R.id.submitBtn);
+        mSelectImage = (ImageButton) findViewById(R.id.imageSelect);
+        mPostTitle = (EditText) findViewById(R.id.titleField);
+        mPostDesc = (EditText) findViewById(R.id.descField);
+        mSubmitBtn = (Button) findViewById(R.id.submitBtn);
         mStorage = FirebaseStorage.getInstance().getReference();
         mProgress = new ProgressDialog(this);
         mDatabase = FirebaseDatabase.getInstance().getReference().child("Blog");
@@ -57,22 +58,23 @@ public class PostActivity extends AppCompatActivity {
             }
         });
     }
+
     private void startPosting() {
         mProgress.setMessage("Posting to blog..");
         mProgress.show();
-        final String title_val = mPostTitle.getText().toString().trim();
-        final String desc_val = mPostDesc.getText().toString().trim();
+        final String title_val = mPostTitle.getText().toString().trim();  // Gönderinin başlığını belirleme
+        final String desc_val = mPostDesc.getText().toString().trim(); // Gönderinin açıklamasını belirleme
 
-        if(!TextUtils.isEmpty(title_val) && !TextUtils.isEmpty(desc_val) && mImageUri != null){
+        if (!TextUtils.isEmpty(title_val) && !TextUtils.isEmpty(desc_val) && mImageUri != null) {  // Başlık ve Açıklamanın boş veya dolu olmasının kontrolü
             StorageReference filepath = mStorage.child("blog_images").child(mImageUri.getLastPathSegment());
             filepath.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                     Uri downloadUri = taskSnapshot.getDownloadUrl();
                     DatabaseReference newPost = mDatabase.push();
-                    newPost.child("title").setValue(title_val);
-                    newPost.child("desc").setValue(desc_val);
-                    newPost.child("image").setValue(downloadUri.toString());
+                    newPost.child("title").setValue(title_val);  // Firebase'e gönderinin başlığının eklenmesi
+                    newPost.child("desc").setValue(desc_val);   // Firebase'e gönderinin açıklamasının eklenmesi
+                    newPost.child("image").setValue(downloadUri.toString());  // Firebase'e gönderinin fotoğrafının eklenmesi
                     mProgress.dismiss();
                     startActivity(new Intent(PostActivity.this, CozCozdur.class));
                 }
@@ -83,7 +85,7 @@ public class PostActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == GALLERY_REQUEST && resultCode == RESULT_OK){
+        if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
             mImageUri = data.getData();
             mSelectImage.setImageURI(mImageUri);
         }

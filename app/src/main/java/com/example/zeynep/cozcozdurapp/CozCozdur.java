@@ -20,7 +20,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-public class CozCozdur extends AppCompatActivity  {
+public class CozCozdur extends AppCompatActivity {
     private RecyclerView mBlogList;
     private DatabaseReference mDatabase;
 
@@ -29,8 +29,8 @@ public class CozCozdur extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coz_cozdur);
 
-        mDatabase = FirebaseDatabase.getInstance().getReference().child("Blog");
-        mBlogList = (RecyclerView)findViewById(R.id.blog_list);
+        mDatabase = FirebaseDatabase.getInstance().getReference().child("Blog");  // Firebase'de gönderilen Blog adı altında gelmesi için kullanılır
+        mBlogList = (RecyclerView) findViewById(R.id.blog_list);
         mBlogList.setHasFixedSize(true);
         mBlogList.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -55,39 +55,41 @@ public class CozCozdur extends AppCompatActivity  {
         mBlogList.setAdapter(firebaseRecyclerAdapter);
     }
 
-   public static class BlogViewHolder extends RecyclerView.ViewHolder{
+    public static class BlogViewHolder extends RecyclerView.ViewHolder {
         View mView;
 
-       public BlogViewHolder(View itemView) {
-           super(itemView);
+        public BlogViewHolder(View itemView) {
+            super(itemView);
 
-           mView = itemView;
-       }
-       public void setTitle(String title){
-           TextView post_title = (TextView) mView.findViewById(R.id.post_title);
-           post_title.setText(title);
-       }
+            mView = itemView;
+        }
 
-       public void setDesc(String desc){
-           TextView post_desc = (TextView) mView.findViewById(R.id.post_text);
-           post_desc.setText(desc);
-       }
-       public void setImage(Context ctx, String image){
-           ImageView post_image = (ImageView) mView.findViewById(R.id.post_image);
-           Picasso.with(ctx).load(image).into(post_image);
-       }
-   }
+        public void setTitle(String title) {
+            TextView post_title = (TextView) mView.findViewById(R.id.post_title);
+            post_title.setText(title);
+        }
+
+        public void setDesc(String desc) {
+            TextView post_desc = (TextView) mView.findViewById(R.id.post_text);
+            post_desc.setText(desc);
+        }
+
+        public void setImage(Context ctx, String image) {
+            ImageView post_image = (ImageView) mView.findViewById(R.id.post_image);
+            Picasso.with(ctx).load(image).into(post_image);
+        }
+    }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.cozcozdurmenu,menu);
+        getMenuInflater().inflate(R.menu.cozcozdurmenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.aciton_add){
+        if (item.getItemId() == R.id.aciton_add) {
             startActivity(new Intent(CozCozdur.this, PostActivity.class));
         }
         return super.onOptionsItemSelected(item);
